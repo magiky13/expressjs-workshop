@@ -2,8 +2,16 @@ var express = require('express');
 var app = express();
 
 
+// app.get('/hello', function(req, res) {
+//     res.send('<h1>Hey Mom</h1>');
+// });
+
+
+
+
 app.get('/hello', function(req, res) {
-    res.send('<h1>Hey Mom</h1>');
+    var input = req.query.name;
+    res.send(`<h1>Hey ${input}</h1>`);
 });
 
 
